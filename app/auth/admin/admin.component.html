@@ -1,0 +1,52 @@
+<div *ngIf="(isLoggedIn | async)" class="jumbotron">
+  <div class="text-white text-center py-2">
+    <div>
+      <h3>Administrera bokningar</h3>
+      <a class="btn radius-btn-red waves-light radius-btn" routerLink="/admin-home" mdbWavesEffect>
+        <i class="fa fa-clone left"></i> Bekräfta bokningar</a>
+      <a class="btn radius-btn-red waves-light radius-btn" routerLink="/admin-confirmed" mdbWavesEffect>
+        <i class="fa fa-clone left"></i> Bokningar / Kunder</a>
+    </div>
+    <div>
+      <i class="fa fa-calendar fa-3x red-text pt-3"></i>
+      <h3>Administrera datum</h3>
+      <a class="btn radius-btn-red waves-light radius-btn mb-4" routerLink="/admin-dates" mdbWavesEffect>
+        <i class="fa fa-calendar left"></i> Administrera datum</a>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- <div *ngIf="(isLoggedIn | async)" class="card card-image mb-3" style="background-image: url(/assets/images/adminpage.jpeg);">
+
+  <div class="text-white text-center align-items-center rgba-black-strong py-2 px-1">
+    <div>
+      <i class="fa fa-clone fa-3x red-text pt-3"></i>
+
+      <h3>Administrera bokningar</h3>
+      <a class="btn radius-btn-red waves-light radius-btn" routerLink="/admin-home" mdbWavesEffect>
+        <i class="fa fa-clone left"></i> Bekräfta bokningar</a>
+      <a class="btn radius-btn-red waves-light radius-btn" routerLink="/admin-confirmed" mdbWavesEffect>
+        <i class="fa fa-clone left"></i> Bokningar / Kunder</a>
+    </div>
+    <div>
+      <i class="fa fa-calendar fa-3x red-text pt-3"></i>
+      <h3>Administrera datum</h3>
+      <a class="btn radius-btn-red waves-light radius-btn mb-4" routerLink="/admin-dates" mdbWavesEffect>
+        <i class="fa fa-calendar left"></i> Administrera datum</a>
+    </div>
+  </div>
+</div> -->
+
+<!-- <div *ngIf="(isLoggedIn | async)" class="card card-image mb-3" style="background-image: url(https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2825%29.jpg);">
+
+  <div class="text-white text-center align-items-center rgba-black-strong py-2 px-1">
+    <div>
+      <i class="fa fa-calendar fa-3x red-text"></i>
+      <h3>Administrera datum</h3>
+      <a class="btn radius-btn-red waves-light radius-btn" routerLink="/admin-dates" mdbWavesEffect>
+        <i class="fa fa-calendar left"></i> Administrera datum</a>
+    </div>
+  </div>
+</div> -->

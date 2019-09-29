@@ -1,0 +1,60 @@
+<div *ngIf="!(isLoggedIn | async)" class="card card-image mb-3" style="background-image: url(https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2825%29.jpg);">
+  <!-- Content -->
+  <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
+    <div>
+      <h3 class="red-text">
+        <i class="fa fa-cogs"></i>
+        Administration</h3>
+        <h3><strong>Mats Clavell</strong></h3>
+        <p><strong>Online Admin</strong></p>
+      <a *ngIf="!(isLoggedIn | async)" class="btn radius-btn-red waves-light radius-btn" (click)="form.show()" mdbWavesEffect>
+        <i class="fa fa-lock left"></i> Inloggning admin</a>
+    </div>
+  </div>
+  <!-- Content -->
+</div>
+
+<!--Modal: Contact form-->
+<div mdbModal #form="mdb-modal" class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <br>
+  <br>
+  <br>
+  <div class="modal-dialog cascading-modal" role="document">
+    <!--Content-->
+    <div class="modal-content">
+
+      <!--Header-->
+      <div class="modal-header special-color-dark darken-3 white-text">
+        <h4 class="title">
+          <i class="fa fa-cogs fa-1x"></i> Admin login</h4>
+      </div>
+      <!--Body-->
+      <div class="modal-body mb-0">
+        <form [formGroup]="signInform" (ngSubmit)=logIn()>
+
+          <div class="md-form form-sm">
+            <i class="fa fa-envelope prefix"></i>
+            <input mdbInputDirective type="email" id="modalFormEmailEx" formControlName="email" class="form-control">
+            <label for="modalFormEmailEx">Email</label>
+          </div>
+
+          <div class="md-form form-sm">
+            <i class="fa fa-lock prefix"></i>
+            <input mdbInputDirective type="text" id="modalFormPasswordEx" formControlName="password" class="form-control">
+            <label for="modalFormPasswordEx">Lösenord</label>
+          </div>
+
+          <div class="text-center mt-1-half">
+            <button class="btn special-color-dark mb-2 waves-light  radius-btn" mdbWavesEffect>Logga in
+              <i class="fa fa-send ml-1"></i>
+            </button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+<!--Modal: Contact form-->

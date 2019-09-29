@@ -1,0 +1,23 @@
+<div class="container">
+        <div class="col">
+        <div class="max_width">
+            <mdb-select [options]="optionsSelect_1" (ngModelChange)="getSelectedValue_1($event)" [(ngModel)]="selectedValue_1" placeholder="Välj månad"
+                class="colorful-select dropdown-info dropdown-pink mt-4">
+            </mdb-select>
+            <label class="text-white mt-2 text-align-center"></label>
+        </div>
+    </div>
+</div>
+<app-calendar *ngIf="selectedValue_1" [month]="selectedValue_1" admin="admin"></app-calendar>
+ 
+<!--<div class="row mb-2">
+        <div class="col-12">
+            <div class="max_width">
+                <mdb-select [options]="optionsSelect_2" (ngModelChange)="getSelectedValue_2($event)" [(ngModel)]="selectedValue_2" placeholder="Välj månad"
+                    class="colorful-select dropdown-info dropdown-pink mt-4">
+                </mdb-select>
+                <label class="text-white mt-2 text-align-center"></label>
+            </div>
+        </div>
+    </div>
+<app-calendar *ngIf="selectedValue_2" [month]="selectedValue_2" admin="admin"></app-calendar> -->

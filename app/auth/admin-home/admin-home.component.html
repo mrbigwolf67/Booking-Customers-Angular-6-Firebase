@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="card-columns">
+        <div *ngFor="let booking of bookings | async" class="card card-image mb-3 h-100" style="background-image: url(/assets/images/adminpage.jpeg);">
+            <div class="text-white text-center align-items-center rgba-black-strong py-2 px-1">
+                <div>
+                    <h3 class="red-text">
+                        <i class="fa fa-calendar"></i>
+                        <!-- <strong> {{ booking.date.toDate() | date: 'yyyy-MM-dd' }} {{ booking.time}} </strong> -->
+                        <strong> {{ booking.date }} {{ booking.time}} </strong>
+                    </h3>
+
+                    <p class="btn btn-warning radius-btn">Status {{ booking.status }}</p>
+
+                    <h3 class="card-title pt-2">
+                        <i class="fa fa-user blue-text"></i>
+                        <strong> {{ booking.name }} </strong>
+                    </h3>
+                    <p>
+                        <i class="fa fa-envelope blue-text"></i> {{ booking.email }}
+                    </p>
+                    <p>
+                        <i class="fa fa-phone blue-text"></i> {{ booking.phone }}
+                    </p>
+                    <p>
+                        <i class="fa fa-comments-o blue-text"></i> {{booking.description }}</p>
+                    <a class="btn radius-btn-red waves-light radius-btn" (click)="confirmBooking(booking.doc_id, booking.name)" mdbWavesEffect>
+                        <i class="fa fa-clone left"></i> Bekräfta bokning</a>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="(( bookings | async)?.length == 0 )" class="card card-image mb-3" style="background-image: url(/assets/images/adminpage.jpeg);">
+            <div class="text-white text-center align-items-center rgba-black-strong py-2 px-1">
+                <div class="container">
+
+                    <h3 class="white-text">
+                        <i class="fa fa-pencil red-text darken-4"></i>
+                        <strong>INGA BOKNINGAR ATT BEKRÄFTA</strong>
+                    </h3>
+
+                    <h3 class="card-title pt-2">
+
+                        <strong> </strong>
+                    </h3>
+
+                    <a class="btn radius-btn-red waves-light radius-btn darken-3" routerLink="/admin-confirmed" mdbWavesEffect>
+                        <i class="fa fa-clone left"></i> Se bekräftade bokningar / kunder</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

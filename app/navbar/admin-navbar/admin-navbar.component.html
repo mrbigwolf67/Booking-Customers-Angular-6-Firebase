@@ -1,0 +1,46 @@
+<!-- <div id="showcase"> -->
+<mdb-navbar SideClass="navbar fixed-top navbar-dark special-color-dark scrolling-navbar ie-nav" [containerInside]="false">
+    <logo>
+        <a class="logo navbar-brand" routerLink=''>
+            <strong>Bokning på nätet</strong>
+        </a>
+    </logo>
+    <links *ngIf="isLoggedIn | async">
+      <ul class="navbar-nav">           
+          <li class="nav-item active">
+              <a class="nav-link waves-light" routerLink="/admin" mdbWavesEffect>Admin<span class="sr-only">(current)</span></a>
+          </li>
+         
+          <li class="nav-item">
+              <a href="#" *ngIf="isLoggedIn | async" class="nav-link text-white p-3 mb-2 sidebar-link" (click)="authService.signOut()">
+                  <i class="fa fa-unlock left text-light fa-lg mr-2"></i>Logga ut
+                </a>
+          </li>
+         
+      </ul>
+  </links> 
+  <nav class='cf'>
+    <ul class='cf'>
+      <li>
+        <a class="logo navbar-brand" routerLink=''>
+          <strong>Bokning på nätet</strong>
+        </a>
+      </li>
+
+      <li>
+        <a href='#showcase'>Overview</a>
+      </li>
+      <li>
+        <a href='#music'>Music</a>
+      </li>
+      <li>
+        <a href='#video'>Video</a>
+      </li>
+      <li *ngIf="isLoggedIn | async">
+        <a href='#' (click)="loggaUt()">Logga ut</a>
+      </li>
+    </ul>
+    <a href='#' id='openup'>MyTunes</a>
+  </nav>
+</mdb-navbar>
+<!-- </div>   -->

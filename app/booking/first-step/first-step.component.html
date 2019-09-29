@@ -1,0 +1,34 @@
+<div class="jumbotron">
+    <div class="text-white text-center py-2">
+        <div class="row">
+            <div class="col">
+                <h5>
+                    <span class="steg_1">1</span>
+                </h5>
+            </div>
+            <div class="col">
+                <h5>
+                    <span class="steg_2">2</span>
+                </h5>
+            </div>
+            <div class="col">
+                <h5>
+                    <span class="steg_3">3</span>
+                </h5>
+            </div>
+        </div>
+
+
+        <div class="col">
+            <mdb-select [options]="optionsSelect" (ngModelChange)="getSelectedValue($event)" [(ngModel)]="selectedValue" placeholder="Välj månad"
+                class="colorful-select dropdown-info mt-1"></mdb-select>
+            <label class="text-white mt-2 text-align-center"></label>
+        </div>
+
+        <div class="mb-5">
+            <app-calendar *ngIf="selectedValue" [month]="selectedValue"></app-calendar>
+        </div>
+
+    </div>
+
+</div>

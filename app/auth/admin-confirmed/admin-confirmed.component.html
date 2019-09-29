@@ -1,0 +1,30 @@
+
+    <!-- Grid column -->
+    <div class="card-columns">
+        <div *ngFor="let booking of bookings | async" class="card card-image" style="background-image: url(/assets/images/adminpage.jpeg);">
+            <div class="text-white text-center align-items-center rgba-black-strong py-5 px-4">
+                <div>
+                    <h3 class="pink-text">
+                        <i class="fa fa-calendar"></i>
+                        <strong> {{ booking.date }} {{ booking.time }} </strong>
+                    </h3>
+                    <p class="btn btn-success radius-btn">{{ booking.status }}</p>
+                    <h3 class="card-title pt-2">
+                        <i class="fa fa-user blue-text"></i>
+                        <strong> {{ booking.name }} </strong>
+                    </h3>
+                    <p>
+                        <i class="fa fa-envelope blue-text"></i> {{ booking.email }}
+                    </p>
+                    <p>
+                        <i class="fa fa-phone blue-text"></i> {{ booking.phone }}
+                    </p>
+                    <p>
+                        <i class="fa fa-comments-o blue-text"></i> {{booking.description }}</p>
+                    <a class="btn radius-btn-pink waves-light radius-btn" [routerLink]="['/admin-confirmed-detail' ,booking.id ]" mdbWavesEffect>
+                        <i class="fa fa-clone left"></i> Ändra bokning </a>
+                </div>
+            </div>
+        </div>
+
+    </div>

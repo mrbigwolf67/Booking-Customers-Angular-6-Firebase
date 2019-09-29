@@ -1,0 +1,68 @@
+<div class="calendar">
+  <div *ngIf="timesOfDay">
+    <div class="container">
+      <div class="row">
+        <div class="grid-container mt-4">
+
+          <!-- <div *ngFor="let tid of (tesing | async)?.tider" class="farg"> -->
+          <div class="grid-items" *ngFor="let tid of timesOfDay | async" class="farg">
+            <button *ngIf="tid.booked" (click)="clickedCheckbox(tid.value, tid.booked, tid.doc_id)" [style.backgroundColor]="redColor">
+              {{tid.value}}Bokad
+            </button>
+            <button *ngIf="!tid.booked" (click)="clickedCheckbox(tid.value, tid.booked, tid.doc_id)" [style.backgroundColor]="greenColor">
+              {{tid.value }} Ledig
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <br>
+  <app-weekdays *ngIf="!waitForData"></app-weekdays>
+
+  <div *ngIf="waitForData" class="text-white text-center py-2">
+    <img src="/assets/images/loading-bars.svg" class="pink-text text-center" width="64" height="64" />
+  </div>
+
+  <div *ngIf="(( monthDays | async)?.length == 0 )"> <br> <br> <strong>Månaden är inte bokningsbar ännu.</strong> <br> <br>    <br>    <br>    <br>    </div>
+  <ul *ngIf="!waitForData" class="day-grid">
+    <li *ngIf="monthString == '09'" class="month-prev"></li>
+    <li *ngIf="monthString == '09'" class="month-prev"></li>
+    <li *ngIf="monthString == '09'" class="month-prev"></li>
+    <li *ngIf="monthString == '09'" class="month-prev"></li>
+    <li *ngIf="monthString == '09'" class="month-prev"></li>
+    <li *ngIf="monthString == '11'" class="month-prev"></li>
+    <li *ngIf="monthString == '11'" class="month-prev"></li>
+    <li *ngIf="monthString == '11'" class="month-prev"></li>
+    <li *ngIf="monthString == '12'" class="month-prev"></li>
+    <li *ngIf="monthString == '12'" class="month-prev"></li>
+    <li *ngIf="monthString == '12'" class="month-prev"></li>
+    <li *ngIf="monthString == '12'" class="month-prev"></li>
+    <li *ngIf="monthString == '12'" class="month-prev"></li>
+    <li *ngFor="let day of monthDays | async" id="{{day.id}}" (click)="squareClick(day.id, day.doc_id, day.value)" [style.backgroundColor]="day.color">
+      <strong>{{day.value}}</strong>
+      <!-- <span class="steg_2"></span> -->
+    </li>
+  </ul>
+
+</div>
+<!-- ng-click="checkAll($event.target.checked)" " [checked]="saveUsername" (change)="saveUsername = !saveUsername  [ng-model]="check" ng-change="checkboxChange(check)" ng-true-value="YES" ng-false-value="NO"-->
+<br><br>
+
+<!-- <p class="bg-primary text-light mb-2">Lorem ipsum lorem ipsum</p>
+<p class="bg-info text-white mt-4">Lorem ipsum lorem ipsum</p>
+<p class="bg-warning text-light mb-2">Lorem ipsum lorem ipsum</p> -->
+
+
+
+<!-- <div *ngIf="admin == 'admin'" class="form-check">
+  <input class="form-check-input filled-in" mdbInputDirective type="checkbox" [checked]="showBookedClients" (change)="showBookedClients = !showBookedClients"
+    id="checkbox1">
+  <label class="form-check-label" for="checkbox1">Visa bokade kunder</label>
+</div>
+
+<div *ngIf="showBookedClients">
+  <app-booked-clients *ngIf="yearMonthDay" [bookedclients]=yearMonthDay></app-booked-clients>
+</div> -->

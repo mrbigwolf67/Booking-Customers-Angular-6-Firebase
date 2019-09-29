@@ -1,0 +1,37 @@
+<div class="jumbotron">
+    <div class="text-white text-center py-2">
+        <div class="row">
+            <div class="col">
+                <h5>
+                    <span class="steg_1">1</span>
+                </h5>
+            </div>
+            <div class="col">
+                <h5>
+                    <span class="steg_2">2</span>
+                </h5>
+            </div>
+            <div class="col">
+                <h5>
+                    <span class="steg_3">3</span>
+                </h5>
+            </div>
+        </div>
+        <div *ngIf="visible"> <br> <br> <br> <br> <br> <img src="/assets/images/loading-bars.svg" class="pink-text text-center"
+                width="64" height="64" /></div>
+
+        <div *ngIf="!visible">
+            <div class="container">
+                <div class="col">
+                    <mdb-select [options]="optionsSelect" (ngModelChange)="getSelectedValue($event)" [(ngModel)]="selectedValue" placeholder="Välj tillgängliga tider.."
+                        class="colorful-select dropdown-primary dropdown-pink mt-3"></mdb-select>
+                </div>
+            </div>
+            <br> <br> <br> <br> <br>
+
+            <button *ngIf="!visible" class="btn radius-btn-pink mb-4" mdbWavesEffect (click)="goToNext()"> Nästa
+                <i class="fa fa-play ml-3"></i>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,61 @@
+<div class="jumbotron">
+    <div class="text-white text-center">
+        <div class="row">
+            <div class="col">
+                <h5>
+                    <span class="steg_1">1</span>
+                </h5>
+            </div>
+            <div class="col">
+                <h5>
+                    <span class="steg_2">2</span>
+                </h5>
+            </div>
+            <div class="col">
+                <h5>
+                    <span class="steg_3">3</span>
+                </h5>
+            </div>
+        </div>
+
+
+        <div class="row text-center text-pink">
+            <p class="ml-4"> Datum: {{dateLocalStorage}} </p>
+            <p class="ml-4"> Tid: {{timeLocalStorage}} </p>
+        </div>
+
+
+        <form [formGroup]="bookingForm" (ngSubmit)=confirmForm()>
+            <div class="grid">
+                <div class="md-form form-sm white-text">
+                    <input mdbInputDirective type="text" id="formName" formControlName="name" data-error="*Saknas" data-success=" " class="form-control white-text ml-0"
+                        required>
+                    <label for="formName" class="pink-text ml-0"> *Namn</label>
+                </div>
+                <div class="md-form form-sm white-text">
+                    <input mdbInputDirective type="text" id="personnumber" formControlName="personnumber" data-error="*Saknas-/ felaktigt" data-success=" "
+                        class="form-control white-text ml-3" required>
+                    <label for="personnumber" class="pink-text ml-3"> *Personnummer</label>
+                </div>
+                <div class="md-form form-sm white-text">
+                    <input mdbInputDirective type="text" id="email" formControlName="email" data-error="*Saknas-/ felaktigt" data-success=" "
+                        class="form-control white-text ml-0" required>
+                    <label for="email" class="pink-text ml-0"> *Email</label>
+                </div>
+                <div class="md-form form-sm white-text">
+                    <input mdbInputDirective type="text" id="forphoneName" formControlName="phone" data-error="*Saknas-/felaktigt" data-success=" "
+                        class="form-control white-text ml-3" required>
+                    <label for="phone" class="pink-text ml-3"> *Mobilnr</label>
+                </div>
+            </div>
+            <div class="md-form form-sm white-text">
+                <input mdbInputDirective type="text" id="description" formControlName="description" data-success=" " class="form-control white-text">
+                <label for="description" class="pink-text ml-1"> Beskriv dina besvär här..</label>
+            </div>
+
+            <button class="btn radius-btn-pink mb-4" type="submit" mdbWavesEffect [disabled]="!bookingForm.valid"> Bekräfta
+                <i class="fa fa-pencil ml-3"></i>
+            </button>
+        </form>
+    </div>
+</div>

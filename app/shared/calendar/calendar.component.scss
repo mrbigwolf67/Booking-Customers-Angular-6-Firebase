@@ -1,0 +1,123 @@
+// .grid {
+//     display: flex;
+//     flex-wrap: wrap;    
+//     display: grid;
+//     grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+//     grid-auto-rows: minmax(50px, auto);
+//     grid-gap: 2px;
+// }
+// .square {
+//     border: 2px solid black;
+//     background: green;
+//     color: aliceblue;
+//     text-align: center;
+// }
+header {
+    display: flex;
+    align-items: center;
+    font-size: calc(16px + (26 - 16) * ((100vw - 300px) / (1600 - 300)));
+    justify-content: center;
+    margin-bottom: 1em;
+    margin-top: 10px;  
+    color: #fff;
+    min-height: 6vh;
+    text-align: center;
+  }
+  .farg {
+    color: rgb(13, 14, 14);
+    font-weight: 500;
+    margin-left: 1px;
+    margin-right: 1px;
+  }
+  // [type=checkbox] {
+  //   position: relative !important;
+  //   opacity: 1 !important;
+  //   height: 30px;
+  //   pointer-events: all;
+  // }  
+
+  button {
+   // margin: 1px;
+   // padding: .2px;
+    border: .6px solid rgba(0, 0, 0, 0.8);
+  }
+
+  .grid-container {
+    margin-left: 8px;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    //background-color: #2196F3;
+  }
+  .grid-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.8);
+   // border: 1px solid rgba(0, 0, 0, 0.8);
+    //padding: 20px;
+   // font-size: 30px;
+    text-align: center;
+  }
+  
+  ul {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 1em;
+    margin: 0 auto;
+    max-width: 64em;
+    padding: 0;
+  }
+  
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    margin-left: 0;
+    font-size: calc(16px + (21 - 16) * ((100vw - 300px) / (1600 - 300)));
+  }
+  
+  ul.weekdays {
+    margin-bottom: 1em;
+  }
+  
+  // ul.weekdays li {
+  //   height: 4vw;
+  // }
+  
+  ul.day-grid li {
+   // background-color: #11e079;
+    border: 2px solid #1d1d1d;
+    height: 12vw;
+    max-height: 125px;
+  }  
+  ul.day-grid li.month-prev {   
+    border: none;   
+   }  
+  // ul.weekdays abbr[title] {
+  //   color: #fff;
+  //   border: none;
+  //   font-weight: 800;
+  //   text-decoration: none;
+  // }
+  
+  // ul.day-grid li:nth-child(34),
+  // ul.day-grid li:nth-child(35) {
+  //   background-color: #dd5875;
+  // }
+  
+  @media all and (max-width: 800px) {
+    ul {
+      grid-gap: .25em;
+    }
+    
+    ul.weekdays li {
+      font-size: 0;
+    }
+    
+    ul.weekdays > li abbr:after {
+        content: attr(title);
+        font-size: calc(16px + (26 - 16) * ((100vw - 300px) / (1600 - 300)));
+      text-align: center;
+      }
+  }

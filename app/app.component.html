@@ -1,0 +1,5 @@
+<app-navbar *ngIf="!isLoggedIn | async"></app-navbar>
+<app-admin-navbar *ngIf="isLoggedIn | async"></app-admin-navbar>
+    <div class="container-fluid">
+    <router-outlet></router-outlet>
+</div>

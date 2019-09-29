@@ -1,0 +1,69 @@
+<!-- <div *ngFor="let clients of bookedClients | async">
+  <strong>{{clients | json}}</strong>
+</div> -->
+<div class="card-columns">
+<!-- <div class="row mt-4"> -->
+ 
+
+<!--      
+      <div class="card indigo text-center z-depth-2">
+          <div class="card-body">
+              <p class="white-text mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere
+                  erat a ante.</p>
+          </div>
+      </div>
+     
+      <br>
+    
+      <div class="card pink lighten-2 text-center z-depth-2">
+          <div class="card-body">
+              <p class="white-text mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere
+                  erat a ante.</p>
+          </div>
+      </div>
+    
+      <br> -->
+     
+      <div *ngFor="let clients of bookedClients | async" class="card purple lighten-2 text-center z-depth-2">
+          <div class="card-body">
+              <!-- <p class="white-text mb-0"> <strong>{{clients | json}}</strong></p> -->
+              <p class="white-text mb-0"> <strong>{{clients.name }}</strong></p>
+              <p class="white-text mb-0"> <strong>{{clients.time }}</strong></p>
+              <p class="white-text mb-0"> <strong>{{clients.phone}}</strong></p>
+          </div>
+      </div>
+     
+
+  </div>
+
+  <!-- <div class="col-md-6">
+
+    
+      <div class="card red lighten-1 text-center z-depth-2">
+          <div class="card-body">
+              <p class="white-text mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere
+                  erat a ante.</p>
+          </div>
+      </div>
+     
+      <br>
+   
+      <div class="card success-color text-center z-depth-2">
+          <div class="card-body">
+              <p class="white-text mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere
+                  erat a ante.</p>
+          </div>
+      </div>
+     
+      <br>
+    
+      <div class="card mdb-color lighten-2 text-center z-depth-2">
+          <div class="card-body">
+              <p class="white-text mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere
+                  erat a ante.</p>
+          </div>
+      </div>
+    
+
+  </div> -->
+<!-- </div> -->

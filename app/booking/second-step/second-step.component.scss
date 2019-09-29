@@ -1,0 +1,64 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+.dropdown-pink {
+background: #e91e63;
+}
+
+// .grid div:nth-child(even) {
+//   background-color: #e91e63
+// }
+// .grid div:nth-child(odd) {
+//   background-color: #0b8146
+// }
+span.steg_1 {
+    background: #e91e63;
+    //border: solid 2px #e91e63;
+    border-radius: 0.8em;
+    -moz-border-radius: 0.8em;
+    -webkit-border-radius: 0.8em;
+    color: #ffffff;
+    display: inline-block;
+    font-weight: bold;
+    line-height: 1.6em;
+    margin-right: 15px;
+    text-align: center;
+    width: 1.6em; 
+  }
+  span.steg_2 {
+    background:transparent;
+    border: solid 1px #e91e63;
+    border-radius: 0.8em;
+    -moz-border-radius: 0.8em;
+    -webkit-border-radius: 0.8em;
+    color: #ffffff;
+    display: inline-block;
+    font-weight: bold;
+    line-height: 1.6em;
+    margin-right: 15px;
+    text-align: center;
+    width: 1.6em; 
+  }
+  span.steg_3 {
+    background: transparent;
+    border: solid 1px #e91e63;
+    border-radius: 0.8em;
+    -moz-border-radius: 0.8em;
+    -webkit-border-radius: 0.8em;
+    color: #ffffff;
+    display: inline-block;
+    font-weight: bold;
+    line-height: 1.6em;
+    margin-right: 15px;
+    text-align: center;
+    width: 1.6em; 
+  }
+  .jumbotron {
+    width: 100%;
+    height: 100vh !important;
+    background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url('/assets/images/bokning.jpg') no-repeat
+    center/cover;
+    position: relative;
+    overflow-y: hidden;  
+}
